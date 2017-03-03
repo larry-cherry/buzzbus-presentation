@@ -11,6 +11,7 @@
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<!-- <link rel="stylesheet" href="css/matrix.css"> -->
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -20,6 +21,7 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+		<script src="js/matrix.js"></script>
 	</head>
 	<body>
 		<div class="reveal">
@@ -33,6 +35,7 @@
 				<h2>Positive Change in Market</h2>
 					<img src="recent_news_story.png" height="550" width="500">
 				</section>
+					
 				<section>
 					<h3>Competition:</h3>
 							<img src="https://cdn-images-1.medium.com/fit/c/60/60/1*_LiYhDk4g9SLGPShQRAMag.png" height="100" width="100">
@@ -52,11 +55,12 @@
 				<section><h3>Demo</h3>
 					<img src="unnamed.png" height="500" width="700">
 				</section>
-				<section>But how does it work?
-				<canvas id="canvas"></canvas>
+				<section>
+				<canvas id="canvas" style="z-index: -1;"></canvas>
+				<h2 style="z-index: 9999;">But how does it work?</h2>	
 				</section>
 				<section>
-				<h1>Questions?</h1>
+						<h2>Questions?</h2>
 				</section>
 			</div>
 		</div>
@@ -68,7 +72,11 @@
 			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				history: true,
-
+		    width: "100%",
+		    height: "100%",
+		    margin: 0,
+		    minScale: 1,
+		    maxScale: 1,
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
